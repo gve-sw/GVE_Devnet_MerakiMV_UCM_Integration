@@ -16,5 +16,5 @@ Collection = " "
 #CUCM
 username = " "
 password = " "
-base_url = " "
+base_url = "http://XX.XX.XX.XX/CGI/Execute"
 phone_number = ""
