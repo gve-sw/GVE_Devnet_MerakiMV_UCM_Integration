@@ -2,11 +2,6 @@
 
 Automatic process to detect vehicles via Meraki Camera and trigger a phone call.
 
-
-| :exclamation:  External repository notice   |
-|:---------------------------|
-| This repository is now mirrored at "PLEASE UPDATE HERE - add External repo URL after code review is completed"  Please inform a https://github.com/gve-sw/ organization admin of any changes to mirror them to the external repo |
-
 ## Contacts
 * Eda Akturk (eakturk@cisco.com)
 * Gerardo Chaves (gchaves@cisco.com)
@@ -68,7 +63,7 @@ MQTT_PORT = " "
 
 *CUCM Connection*
 
-6.  Add the username, password and base_url for the CUCM. Additionally add the phone number to dial when a vehicle is seen. 
+6.  Add the username, password and base_url for the CUCM. Additionally add the phone number to dial when a vehicle is seen. You can find the documentation for the Dial URI, which initiates a new call to a given number, [here.](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cuipph/all_models/xsi/9-1-1/CUIP_BK_P82B3B16_00_phones-services-application-development-notes/CUIP_BK_P82B3B16_00_phones-services-application-development-notes_chapter_0101.html#CUIP_RF_DD875CB1_00) For more details on Cisco Unified IP Phone Services App Development you can refer to the documentation [here.](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cuipph/all_models/xsi/9-1-1/CUIP_BK_P82B3B16_00_phones-services-application-development-notes/CUIP_BK_P82B3B16_00_phones-services-application-development-notes_chapter_011.html)
 ```
 username = " "
 password = " "
