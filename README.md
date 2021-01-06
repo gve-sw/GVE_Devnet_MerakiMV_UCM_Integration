@@ -3,10 +3,6 @@
 Automatic process to detect vehicles via Meraki Camera and trigger a phone call.
 
 
-| :exclamation:  External repository notice   |
-|:---------------------------|
-| This repository is now mirrored at "PLEASE UPDATE HERE - add External repo URL after code review is completed"  Please inform a https://github.com/gve-sw/ organization admin of any changes to mirror them to the external repo |
-
 ## Contacts
 * Eda Akturk (eakturk@cisco.com)
 * Gerardo Chaves (gchaves@cisco.com)
@@ -45,11 +41,11 @@ Now you have your virtual environment setup and ready
 ## Setup: 
 
 *Meraki MV Camera Connection*
-1. Obtain the Meraki API key and add it to env_var.py file. You can find details on how to obtain the Meraki API key [here.](https://developer.cisco.com/meraki/api-v1/#authorization)
+1. Obtain the Meraki API key and add it to `env_var.py` file. You can find details on how to obtain the Meraki API key [here.](https://developer.cisco.com/meraki/api-v1/#authorization)
 ```
 MERAKI_API_KEY= " "
 ```
-2. Add your Network ID and Camera Serial to the mv_mqtt.py file. 
+2. Add your Network ID and Camera Serial to the `mv_mqtt.py` file. 
 ```
 NETWORK_ID = " "
 CAMERA_SERIAL = " "
@@ -60,7 +56,7 @@ CAMERA_SERIAL = " "
 
 4. Click to Add or Edit MQTT Brokers > New MQTT Broker and add you broker information. For testing/trial you can find public broker at [here](https://github.com/mqtt/mqtt.github.io/wiki/public_brokers).
 
-5. Add the MQTT Server settings to the env_var.py file.
+5. Add the MQTT Server settings to the `env_var.py` file.
 ```
 MQTT_SERVER = " "
 MQTT_PORT = " "
@@ -68,13 +64,13 @@ MQTT_PORT = " "
 
 *CUCM Connection*
 
-6.  Add the username, password and base_url for the CUCM. Additionally add the phone number to dial when a vehicle is seen. 
-```
-username = " "
-password = " "
-base_url = " "
-phone_number = ""
-```
+6.  Also in the `env_var.py` file, set the values for the following fields:  
+```username``` : the CUCM username that is authorized to send XML objects to the phone device  
+```password``` : the password corresponding to the CUCM username that is authorized to send XML objects to the phone device  
+```base_url``` : the URL on the phone device to send the command to dial where the code will send the XML object; this is typically    "http://XX.XX.XX.XX/CGI/Execute" where XX.XX.XX.XX is the IP address of the IP Phone.   
+```phone_number``` : the phone number or extension number to dial when a vehicle is detected.   
+You can find more information on the Dial URI, which initiates a new call to a specified number [here.](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cuipph/all_models/xsi/9-1-1/CUIP_BK_P82B3B16_00_phones-services-application-development-notes/CUIP_BK_P82B3B16_00_phones-services-application-development-notes_chapter_0101.html#CUIP_RF_DD875CB1_00) For more information about Cisco Unified IP Phone Services App Development please refer to the document [here.](https://www.cisco.com/c/en/us/td/docs/voice_ip_comm/cuipph/all_models/xsi/9-1-1/CUIP_BK_P82B3B16_00_phones-services-application-development-notes/CUIP_BK_P82B3B16_00_phones-services-application-development-notes_chapter_011.html)  
+
 
 *(Optional) Database Connection*
 
